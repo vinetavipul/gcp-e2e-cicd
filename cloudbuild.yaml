@@ -3,7 +3,7 @@
 steps:
   # Build app
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['build', '-t', 'us-central1-docker.pkg.dev/$PROJECT_ID/hello-world-python/hello-world-python:${COMMIT_SHA}', '-t', 'us-central1-docker.pkg.dev/$PROJECT_ID/hello-world-python/hello-world-python','-f', 'Dockerfile']
+    args: ['build','.', '-t', 'us-central1-docker.pkg.dev/$PROJECT_ID/hello-world-python/hello-world-python:${COMMIT_SHA}', '-t', 'us-central1-docker.pkg.dev/$PROJECT_ID/hello-world-python/hello-world-python','-f', 'Dockerfile']
     dir: 'app'  
     id: build
   # Run unit tests

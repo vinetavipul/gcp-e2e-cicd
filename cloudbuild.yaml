@@ -25,6 +25,6 @@ steps:
         "--delivery-pipeline", "hello-world-python-pipeline",
         "--region", "us-central1",
         "--annotations", "commitId=${REVISION_ID}",
-        "--images", "hello-world-python=us-central1-docker.pkg.dev/data-demo-2021/hello-world-python/hello-world-python:${COMMIT_SHA}",
-        "--project", "data-demo-2021"
+        "--images", "hello-world-python=us-central1-docker.pkg.dev/$PROJECT_ID/hello-world-python/hello-world-python:${COMMIT_SHA}",
+        "--project", $PROJECT_ID
       ]
